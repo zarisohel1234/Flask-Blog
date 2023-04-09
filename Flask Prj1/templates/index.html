@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block samepart %}
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('static/assets/img/home-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>{{params['blog_name']}}</h1>
+          <span class="subheading">Welcome To Coders</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      <!-- Post preview-->
+      <!-- Divider-->
+      <hr class="my-4" />
+      <!-- Post preview-->
+
+      {% for post in posts %}
+      <!-- Fetch it from Database -->
+      <div class="post-preview">
+        <a href="/post/{{post.slug}}"
+          ><h2 class="post-title">
+           {{post.title}}
+          </h2></a
+        >
+        <h3 class="post-subtitle">{{post.tag_line}}</h3>
+        <p class="post-meta">
+          Posted by 
+          <a href="#!">Coding Thunders</a>
+          on {{post.date}}
+        </p>
+        {{post.content[0:140]}}...
+      </div>
+    </a></li>
+      {% endfor %}
+      <!-- Divider-->
+      <hr class="my-4" />
+      <!-- Pager-->
+      <div class="clearfix">
+      {% if number!=0 %}
+        <a class="btn btn-primary float-left" href="/">&larr;PREV</a>
+        <a class="btn btn-primary float-right" href="/">NEXT&rarr;</a>
+      {% endif %}
+    </div>
+    </div>
+  </div>
+</div>
+{% endblock samepart %}

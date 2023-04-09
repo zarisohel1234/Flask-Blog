@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block samepart %}
+<!-- Page Header-->
+{% set fname =post.img_url %}
+<header class="masthead" style="background-image:url('{{url_for('static',filename=fname)}}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="post-heading">
+                    <h1>{{post.title}}</h1>
+                    <h2 class="subheading">
+                        Problems look mighty small from 150 miles up
+                    </h2>
+                    <span class="meta">
+                        Posted by 
+                        <a href="#!">Start Bootstrap</a>
+                        on {{post.date}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+
+                <a href="#!"><img class="img-fluid" src="{{url_for('static',filename='assets/img/post-sample-image.jpg')}}" alt="..." /></a>
+                <span class="caption text-muted">To go places and do things that have never been done before – that’s
+                    what living is all about.</span>
+                <p>
+                   {{post.content}}
+               </p>
+                    Placeholder text by
+                    <a href="http://spaceipsum.com/">Space Ipsum</a>
+                    &middot; Images by
+                    <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</article>
+
+{% endblock samepart %}

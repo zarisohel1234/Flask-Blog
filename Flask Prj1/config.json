@@ -1,0 +1,18 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql://root:@localhost/flask1",
+        "prod_uri":"mysql://root:@localhost/flask1",
+        "fb_url":"https://facebook.com/flask1",
+        "tw_url":"https://twitter.com/flask1",
+        "gh_url":"https://github.com/flask1",
+        "blog_name":"PRO CODERS ARE HERE",
+        "gmail_user":"zarisohel@gmail.com",
+        "gmail_password":"20061998",
+        "texts":3,
+        "admin_user":"SohelZari@123",
+        "admin_pass":"Sohel@123",
+        "upload_location":"D:"
+    }
+}
